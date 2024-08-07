@@ -1,0 +1,37 @@
+{
+  "name": "humble desktop",
+  "dockerFile": "Dockerfile",
+  "runArgs": [
+        // "--gpus=all",
+        "--network=host",
+        "--ipc=host",
+        "-v",
+        "/tmp/.X11-unix:/tmp/.X11-unix",
+        "-v",
+        "/dev/dri:/dev/dri",
+        "--env",
+        "DISPLAY=host.docker.internal:0.0",
+        "--env",
+        // "NVIDIA_DRIVER_CAPABILITIES=all",
+        "--privileged"
+    ],
+    "workspaceMount": "source=${localWorkspaceFolder},target=/${localWorkspaceFolderBasename},type=bind",
+    "workspaceFolder": "/${localWorkspaceFolderBasename}",
+    "mounts": [
+      "source=${localEnv:HOME}${localEnv:USERPROFILE}/.bash_history,target=/home/vscode/.bash_history,type=bind"
+    ],
+  "customizations": {
+        "vscode": {
+            "extensions": [
+              "ms-python.python",
+              "redhat.vscode-xml",
+              "twxs.cmake",
+              "ms-vscode.cpptools",
+              "ms-azuretools.vscode-docker",
+              "esbenp.prettier-vscode",
+              "bierner.markdown-preview-github-styles"
+            ]
+        }
+      }
+  
+}

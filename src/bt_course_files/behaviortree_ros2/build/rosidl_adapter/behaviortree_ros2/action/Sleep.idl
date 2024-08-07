@@ -1,0 +1,24 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from behaviortree_ros2/action/Sleep.action
+// generated code does not contain a copyright notice
+
+
+module behaviortree_ros2 {
+  module action {
+    @verbatim (language="comment", text=
+      "goal definition")
+    struct Sleep_Goal {
+      int32 msec_timeout;
+    };
+    @verbatim (language="comment", text=
+      "result definition")
+    struct Sleep_Result {
+      boolean done;
+    };
+    @verbatim (language="comment", text=
+      "feedback")
+    struct Sleep_Feedback {
+      int32 cycle;
+    };
+  };
+};

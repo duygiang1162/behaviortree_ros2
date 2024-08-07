@@ -1,0 +1,6 @@
+{
+  "package_name": "behaviortree_ros2",
+  "non_idl_tuples": [
+    "/behavior_ros2/src/bt_course_files/behaviortree_ros2:action/Sleep.action"
+  ]
+}
